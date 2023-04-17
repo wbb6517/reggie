@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Slf4j
@@ -40,6 +41,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * 通常在Spring Boot中，我们无需显式地添加该注解，因为Spring Boot会自动配置并启用该功能。
  * 在使用纯Spring框架时，需要手动添加该注解才能启用事务管理。
  */
+@EnableCaching
 public class ReggieApplication {
 
     public static void main(String[] args) {
